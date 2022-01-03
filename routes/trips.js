@@ -7,6 +7,11 @@ const router = Router() // S7
 router.get('/', tripCtrl.index)
 // S9: Copy and paste of of the routes and comment them out. Then include the actions/functions corresponding with the routes.
 // GET trips/:id Retrieve a SINGLE trip
+router.get('/:id', tripCtrl.show)
+// POST /trips Add a trip
+router.post('/', tripCtrl.create)
+// PUT /trips/:id Update a trip
+router.put('/:id', tripCtrl.delete)
 
 export {
     router

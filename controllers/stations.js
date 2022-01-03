@@ -12,7 +12,13 @@ function index(req, res){
 }
 
 function show(req, res){
-
+    Station.findById(req.params.id)
+    .then(station => {
+        res.json(station)
+    })
+    .catch(err => {
+        res.json(err)
+    })
 }
 
 function create(req, res){ // S13
@@ -26,11 +32,23 @@ function create(req, res){ // S13
 }
 
 function update(req, res){
-
+    Station.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then(station => {
+        res.json(station)
+    })
+    .catch(err => {
+        res.json(err)
+    })
 }
 
 function deleteTrip(req, res){
-
+    Station.findByIdAndDelete(req.params.id)
+    .then(station => {
+        res.json(station)
+    })
+    .catch(err => {
+        res.json(err)
+    })
 }
 
 // S12: Export all of the functions

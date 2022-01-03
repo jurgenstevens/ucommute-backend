@@ -29,7 +29,7 @@ function update(req, res){
 
 }
 
-function deleteStation(req, res){
+function deleteTrip(req, res){
 
 }
 
@@ -39,6 +39,6 @@ export {
     show,
     create,
     update,
-    deleteStation as delete
+    deleteTrip as delete
 }
 

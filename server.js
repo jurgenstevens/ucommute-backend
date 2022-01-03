@@ -5,7 +5,6 @@ import { fileURLToPath } from 'url'
 import logger from 'morgan'
 import cors from 'cors'
 
-
 import { router as usersRouter } from './routes/users.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as tripRouter } from './routes/trips.js'
