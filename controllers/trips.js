@@ -12,7 +12,13 @@ function index(req, res){
 }
    
 function show(req, res){
-
+    Trip.findById(req.params.id)
+    .then(station => {
+        res.json(station)
+    })
+    .catch(err => {
+        res.json(err)
+    })
 }
 
 function create(req, res){ // S13
