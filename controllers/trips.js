@@ -32,7 +32,13 @@ function create(req, res){ // S13
 }
 
 function update(req, res){
-
+    Trip.findByIdAndUpdate(req.params.id, req.body, {new: true})
+    .then(trip => {
+        res.json(trip)
+    })
+    .catch(err => {
+        res.json(err)
+    })
 }
 
 function deleteTrip(req, res){

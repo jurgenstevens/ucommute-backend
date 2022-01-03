@@ -11,7 +11,7 @@ router.get('/:id', tripCtrl.show)
 // POST /trips Add a trip
 router.post('/', tripCtrl.create)
 // PUT /trips/:id Update a trip
-router.put('/:id', tripCtrl.delete)
+router.put('/:id', tripCtrl.update)
 
 export {
     router
