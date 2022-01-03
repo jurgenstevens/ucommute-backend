@@ -42,7 +42,13 @@ function update(req, res){
 }
 
 function deleteTrip(req, res){
-
+    Trip.findByIdAndDelete(req.params.id)
+    .then(trip => {
+        res.json(trip)
+    })
+    .catch(err => {
+        res.json(err)
+    })
 }
 
 // S12: Export all of the functions

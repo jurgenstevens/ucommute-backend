@@ -12,6 +12,9 @@ router.get('/:id', tripCtrl.show)
 router.post('/', tripCtrl.create)
 // PUT /trips/:id Update a trip
 router.put('/:id', tripCtrl.update)
+// DELETE /trips/:id Delete a trip
+router.delete('/:id', tripCtrl.delete)
+
 
 export {
     router
