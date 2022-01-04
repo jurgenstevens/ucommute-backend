@@ -1,9 +1,11 @@
 import mongoose from 'mongoose'
 
-const tripSchema = new mongoose.Schema({
+const Schema = mongoose.Schema
+
+const tripSchema = new Schema({
     tripName: String,
-    origin: String,
-    destination: String
+    origin: [{type: Schema.Types.Object, ref: "Station"}],
+    destination: [{type: Schema.Types.Object, ref: "Station"}]
 })
 
 const Trip = mongoose.model('Trip', tripSchema)
