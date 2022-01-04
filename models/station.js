@@ -6,6 +6,8 @@ const stationSchema = new mongoose.Schema({
     line: String,
     transfer: Boolean,
     transferLine: [String]
+}, {
+    timestamps: true
 });
 
 const Station = mongoose.model('Station', stationSchema);
