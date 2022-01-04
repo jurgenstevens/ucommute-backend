@@ -4,8 +4,8 @@ const Schema = mongoose.Schema
 
 const tripSchema = new Schema({
     tripName: String,
-    origin: [{type: Schema.Types.Object, ref: "Station"}],
-    destination: [{type: Schema.Types.Object, ref: "Station"}]
+    origin: {type: Schema.Types.Object, ref: "Station"},
+    destination: {type: Schema.Types.Object, ref: "Station"}
 })
 
 const Trip = mongoose.model('Trip', tripSchema)
