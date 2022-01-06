@@ -10,27 +10,17 @@ function index(req, res){
         res.json(err)
     })
 }
-   
-// function show(req, res){
-//     Trip.findById(req.params.id)
-//     .then(trip => {
-//         res.json(trip)
-//     })
-//     .catch(err => {
-//         res.json(err)
-//     })
-// }
 
 function show(req, res){
     Trip.findById(req.params.id)
-    .populate('origin')
-    .populate('destination')
+    .populate(['origin', 'destination'])
     .then(trip => {
         res.json(trip)
     })
+    .catch(err => {
+        res.json(err)
+    })
 }
-
-
 
 function create(req, res){ // S13
     Trip.create(req.body)
