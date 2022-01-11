@@ -1,7 +1,5 @@
 import 'dotenv/config.js'
 import express from 'express'
-import path from 'path'
-import { fileURLToPath } from 'url'
 import logger from 'morgan'
 import cors from 'cors'
 
@@ -18,7 +16,6 @@ import('./config/database.js')
 const app = express()
 
 // middleware
-app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)),'build')))
 app.use(cors())
 app.use(logger('dev'))
 app.use(express.json())
@@ -29,14 +26,12 @@ app.use('/api/auth', authRouter)
 app.use('/trips', tripRouter) // S5
 app.use('/stations', stationRouter)
 
-app.get('/*', function (req, res) {
-  res.sendFile(
-    path.dirname(fileURLToPath(import.meta.url), 'build', 'index.html')
-  )
+app.use(function (req, res, next) {
+  res.status(404).json({ err: "Not found" })
 })
 
-const port = process.env.PORT || 3001
-
-app.listen(port, () => {
-  console.log(`Express is listening on port ${port}.`)
+app.use(function (err, req, res, next) {
+  res.status(err.status || 500).json({ err: err.message })
 })
+
+export { app }

@@ -5,7 +5,7 @@ function index(req, res){
     Trip.find({})
     .then(trips => {
         res.json(trips) // S13: All we need to do is respond with a JSON object
-    })
+    }) 
     .catch(err => {
         res.json(err)
     })
