@@ -3,7 +3,7 @@ import express from 'express'
 import logger from 'morgan'
 import cors from 'cors'
 
-import { router as usersRouter } from './routes/users.js'
+import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as tripRouter } from './routes/trips.js'
 import { router as stationRouter } from './routes/stations.js'
@@ -21,7 +21,7 @@ app.use(logger('dev'))
 app.use(express.json())
 
 // mounted routers
-app.use('/api/users', usersRouter)
+app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/trips', tripRouter) // S5
 app.use('/stations', stationRouter)
