@@ -2,8 +2,9 @@ import { Trip } from '../models/trip.js'
 
 // Stub up all of the functions
 function index(req, res){
-    Trip.find()
-    .populate(['origin', 'destination', 'commuter'])
+    Trip.find({})
+    .populate(['commuter', 'destination', 'origin'])
+    .exec()
     .then(trips => {
         res.json(trips) // All we need to do is respond with a JSON object
     }) 
@@ -28,7 +29,7 @@ function create(req, res){
     req.body.commuter = req.user.profile
     Trip.create(req.body)
     .then(newTrip => {
-        newTrip.populate('commuter')
+        newTrip.populate(['commuter', 'destination', 'origin'])
         .then(trip => {
             res.json(trip)
         })
