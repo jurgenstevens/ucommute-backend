@@ -6,7 +6,7 @@ const tripSchema = new Schema({
     tripName: String,
     origin: {type: Schema.Types.Object, ref: "Station"},
     destination: {type: Schema.Types.Object, ref: "Station"},
-    commuter: {type: mongoose.Types.ObjectId, reef: "Profile"}
+    commuter: {type: Schema.Types.ObjectId, ref: "Profile"}
 }, {
     timestamps: true
 })

@@ -23,7 +23,7 @@ app.use(express.json())
 // mounted routers
 app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
-app.use('/trips', tripRouter) // S5
+app.use('/trips', tripRouter)
 app.use('/stations', stationRouter)
 
 app.use(function (req, res, next) {

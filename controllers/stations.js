@@ -1,10 +1,10 @@
-import { Station } from '../models/station.js' // S12
+import { Station } from '../models/station.js'
 
-// S12: Stub up all of the functions
+//Stub up all of the functions
 function index(req, res){
     Station.find({})
     .then(stations => {
-        res.json(stations) // S13: All we need to do is respond with a JSON object
+        res.json(stations) // All we need to do is respond with a JSON object
     })
     .catch(err => {
         res.json(err)
@@ -21,7 +21,7 @@ function show(req, res){
     })
 }
 
-function create(req, res){ // S13
+function create(req, res){
     Station.create(req.body)
     .then(station => {
         res.json(station)

@@ -1,20 +1,21 @@
-import { Trip } from '../models/trip.js' // S12
+import { Trip } from '../models/trip.js' 
 
-// S12: Stub up all of the functions
+// Stub up all of the functions
 function index(req, res){
-    Trip.find({})
-    .populate('commuter')
+    Trip.find()
+    .populate(['origin', 'destination', 'commuter'])
     .then(trips => {
-        res.json(trips) // S13: All we need to do is respond with a JSON object
+        res.json(trips) // All we need to do is respond with a JSON object
     }) 
     .catch(err => {
         res.json(err)
+        console.log("Error:", err)
     })
 }
 
 function show(req, res){
     Trip.findById(req.params.id)
-    .populate(['origin', 'destination'])
+    .populate(['origin', 'destination', 'commuter'])
     .then(trip => {
         res.json(trip)
     })
@@ -23,11 +24,14 @@ function show(req, res){
     })
 }
 
-function create(req, res){ // S13
+function create(req, res){
     req.body.commuter = req.user.profile
     Trip.create(req.body)
-    .then(trip => {
-        res.json(trip)
+    .then(newTrip => {
+        newTrip.populate('commuter')
+        .then(trip => {
+            res.json(trip)
+        })
     })
     .catch(err => {
         res.json(err)

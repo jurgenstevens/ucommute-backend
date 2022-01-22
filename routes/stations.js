@@ -2,7 +2,7 @@ import { Router } from 'express'
 import * as stationCtrl from '../controllers/stations.js' // S7
 const router = Router()
 
-// S8: We're already in the /stations router so don't add another '/stations' to the route.
+// We're already in the /stations router so don't add another '/stations' to the route.
 // GET /stations Retrieve ALL stations
 router.get('/', stationCtrl.index)
 // S9: Copy and paste of of the routes and comment them out. Then include the actions/functions corresponding with the routes.
