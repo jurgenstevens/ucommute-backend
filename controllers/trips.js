@@ -3,6 +3,7 @@ import { Trip } from '../models/trip.js' // S12
 // S12: Stub up all of the functions
 function index(req, res){
     Trip.find({})
+    .pupulate('commuter')
     .then(trips => {
         res.json(trips) // S13: All we need to do is respond with a JSON object
     }) 
@@ -23,6 +24,7 @@ function show(req, res){
 }
 
 function create(req, res){ // S13
+    req.body.commuter = req.user.profile
     Trip.create(req.body)
     .then(trip => {
         res.json(trip)
