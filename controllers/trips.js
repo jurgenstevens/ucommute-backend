@@ -41,8 +41,11 @@ function create(req, res){
 
 function update(req, res){
     Trip.findByIdAndUpdate(req.params.id, req.body, {new: true})
-    .then(trip => {
-        res.json(trip)
+    .then(newTrip => {
+        newTrip.populate(['commuter', 'destination', 'origin'])
+        .then(trip => {
+            res.json(trip)
+        })
     })
     .catch(err => {
         res.json(err)
