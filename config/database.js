@@ -4,7 +4,8 @@ const db = mongoose.connection
 
 mongoose.connect(process.env.DATABASE_URL, {
   ssl: true,
-  sslValidate: false
+  sslValidate: true,
+  // sslCA: `${__dirname}/rootCA.pem`
 });
 
 db.on('connected', function () {
