@@ -41,7 +41,7 @@ function update(req, res){
     })
 }
 
-function deleteTrip(req, res){
+function deleteStation(req, res){
     Station.findByIdAndDelete(req.params.id)
     .then(station => {
         res.json(station)
@@ -57,6 +57,6 @@ export {
     show,
     create,
     update,
-    deleteTrip as delete
+    deleteStation as delete
 }
 

@@ -4,7 +4,6 @@ import { Trip } from '../models/trip.js'
 function index(req, res){
     Trip.find({})
     .populate(['commuter', 'destination', 'origin'])
-    .exec()
     .then(trips => {
         res.json(trips) // All we need to do is respond with a JSON object
     }) 
