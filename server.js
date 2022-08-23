@@ -7,6 +7,7 @@ import { router as profilesRouter } from './routes/profiles.js'
 import { router as authRouter } from './routes/auth.js'
 import { router as tripRouter } from './routes/trips.js'
 import { router as stationRouter } from './routes/stations.js'
+import { router as stopRouter } from './routes/stops.js'
 
 // connect to MongoDB with mongoose
 
@@ -25,7 +26,7 @@ app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/trips', tripRouter)
 app.use('/stations', stationRouter)
-app.use('api/stops', stopsRouterer)
+app.use('api/stops', stopRouter)
 
 
 app.use(function (req, res, next) {
