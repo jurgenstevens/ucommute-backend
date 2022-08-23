@@ -26,7 +26,7 @@ app.use('/api/profiles', profilesRouter)
 app.use('/api/auth', authRouter)
 app.use('/trips', tripRouter)
 app.use('/stations', stationRouter)
-app.use('api/stops', stopRouter)
+app.use('/api/stops', stopRouter)
 
 
 app.use(function (req, res, next) {
