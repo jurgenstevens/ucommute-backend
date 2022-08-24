@@ -15,10 +15,15 @@ function index(req, res){
         return res.json();
     })
     .then((data) => {
-        res.send({ data });
+        res.send(data);
     })
 }
 
+function show(req, res){
+    console.log("The show function is being hit.")
+}
+
 export {
-    index
+    index,
+    show
 }
