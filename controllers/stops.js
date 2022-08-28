@@ -34,7 +34,7 @@ async function show(req, res){
 
     const response = await fetch(`${ctaUrl}?key=${process.env.CTA_API_KEY}&mapid=${stopId}`)
     const data = await response.text()
-    let resData = {}
+    let resData
     return new Promise((resolve, reject) => {
         if(!data){
             reject("error")
