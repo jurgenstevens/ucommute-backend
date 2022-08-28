@@ -1,8 +1,6 @@
 import 'dotenv/config.js'
-import { response } from 'express'
 import fetch from "node-fetch"
 import { parseString } from 'xml2js'
-import util from "util"
 
 
 function index(req, res){
