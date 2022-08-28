@@ -50,65 +50,6 @@ async function show(req, res){
     })
 }
 
-
-// function show(req, res){
-
-//     let ctaKey = process.env.CTA_API_KEY
-//     let stopId = req.params.id
-//     let ctaUrl = `http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx`
-//     const headers = {
-//         "Content-Type": "application/json",
-//         "key": process.env.CTA_API_KEY
-//     }
-//     let parser = new xml2js.Parser()
-//     let data = fetch(`${ctaUrl}?key=${ctaKey}&mapid=${stopId}`, {
-//         method: "GET"
-//     })
-//     parser.parseStringPromise(data, (err, result) => {
-//         console.log(result)
-//     })
-//     // .then(res => {
-//     //     console.log(res)
-//     //     res.send()
-//     // })
-//     // .catch(err => console.log(err));
-// }
-
-
-
-// function show(req, res){
-
-//     let ctaKey = process.env.CTA_API_KEY
-//     let stopId = req.params.id
-//     let ctaUrl = `http://lapi.transitchicago.com/api/1.0/ttarrivals.aspx`
-//     const headers = {
-//         "Content-Type": "application/json",
-//         "key": process.env.CTA_API_KEY
-//     }
-//     fetch(`${ctaUrl}?key=${ctaKey}&mapid=${stopId}`, {
-//         method: "GET"
-//     })
-//     .then(res => {
-//         let data = res.text()
-//         console.log("This is DATA: ", data)
-//         parseString(data, (err, results) => {
-//             let json = JSON.stringify(results)
-//             console.log("This is JSON: ", json)
-//             return json
-//         })
-//     })
-//     .then(data => {
-//         console.log(data)
-//         parseString(data, (err, results) => {
-//         let json = JSON.stringify(results)
-//         console.log("This is JSON: ", json)
-//         return json
-//         })
-//     })
-//      .catch(err => console.log(err));
-// }
-
-
 export {
     index,
     show
