@@ -1,0 +1,245 @@
+[
+    {
+        "stopId": 701,
+        "station": "Harlem/Lake",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 702,
+        "station": "Oak Park",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 703,
+        "station": "Ridgeland",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 704,
+        "station": "Austin",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 705,
+        "station": "Central",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 706,
+        "station": "Laramie",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 707,
+        "station": "Cicero",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 708,
+        "station": "Pulaski",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 709,
+        "station": "Howard",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Red",
+            "Yellow"
+        ]
+    },
+    {
+        "stopId": 710,
+        "station": "Conservatory-Central Park Drive",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 711,
+        "station": "Kedize",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 712,
+        "station": "California",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": [
+            "Green"
+        ]
+    },
+    {
+        "stopId": 713,
+        "station": "Ashland",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Pink"
+        ]
+    },
+    {
+        "stopId": 714,
+        "station": "Morgan",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 715,
+        "station": "Clinton",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Pink"
+        ]
+    },
+    {
+        "stopId": 716,
+        "station": "Clark/Lake",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Orange",
+            "Blue",
+            "Pink",
+            "Purple",
+            "Brown"
+        ]
+    },
+    {
+        "stopId": 717,
+        "station": "State/Lake",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Red"
+        ]
+    },
+    {
+        "stopId": 718,
+        "station": "Washington/Wabash",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 719,
+        "station": "Adams/Wabash",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Brown",
+            "Green",
+            "Orange",
+            "Green",
+            "Green"
+        ]
+    },
+    {
+        "stopId": 720,
+        "station": "Roosevelt",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": [
+            "Red",
+            "Orange"
+        ]
+    },
+    {
+        "stopId": 721,
+        "station": "Cermak/McCormick",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 722,
+        "station": "35th-Bronzeville-IIT",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 723,
+        "station": "Indiana",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 724,
+        "station": "43rd",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 725,
+        "station": "47th",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 726,
+        "station": "51st",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 727,
+        "station": "Garfield",
+        "line": "Green",
+        "transfer": true,
+        "transferLine": ["Ashland", "Cottage Grove"]
+    },
+    {
+        "stopId": 728,
+        "station": "Halsted",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 729,
+        "station": "Ashland/63rd",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 730,
+        "station": "King Drive",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    },
+    {
+        "stopId": 725,
+        "station": "Cottage Grove",
+        "line": "Green",
+        "transfer": false,
+        "transferLine": []
+    }
+]

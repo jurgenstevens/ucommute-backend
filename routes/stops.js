@@ -5,8 +5,11 @@ import { decodeUserFromToken, checkAuth } from '../middleware/auth.js'
 
 /* ------------ Public Routes ------------ */
 // GET /trips Retrieve ALL trips
-router.get('/', stopCtrl.index)
-router.get('/:id', stopCtrl.show)
+// localhost:3001/stops
+router.use(decodeUserFromToken)
+router.get('/', checkAuth, stopCtrl.index)
+// localhost:3001/stops/:id
+router.get('/:id', checkAuth, stopCtrl.show)
 
 export {
     router

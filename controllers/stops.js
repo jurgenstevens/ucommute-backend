@@ -8,7 +8,6 @@ function index(req, res){
     const headers = {
         "Content-Type": "application/json"
     }
-
     fetch(cityUrl, {
         method: "GET",
         headers: headers,
